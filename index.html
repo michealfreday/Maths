@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculus – Full Step‑by‑Step Solutions</title>
+    <!-- MathJax for beautiful math rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async>
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f1f5f9;
+            padding: 2rem 1rem;
+            color: #0f172a;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .header h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #0f172a;
+        }
+        .header h1 span {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            padding: 0 0.8rem;
+            border-radius: 12px;
+            color: white;
+        }
+        .header p {
+            color: #475569;
+            font-size: 1.1rem;
+            margin-top: 0.3rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1rem;
+        }
+        .section {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            border-left: 6px solid #3b82f6;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+        .badge {
+            background: #64748b;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.1rem 1rem;
+            border-radius: 30px;
+        }
+        /* Q&A Grid */
+        .qa-grid {
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            gap: 0.8rem 1.5rem;
+            align-items: start;
+        }
+        @media (max-width: 700px) {
+            .qa-grid {
+                grid-template-columns: 1fr;
+                gap: 0.2rem;
+            }
+            .qa-answer {
+                margin-bottom: 1.2rem;
+                padding-left: 0.8rem;
+                border-left: 3px solid #22c55e;
+            }
+            .qa-question {
+                font-weight: 600;
+                margin-top: 0.8rem;
+            }
+        }
+        .qa-item {
+            border-bottom: 1px solid #f1f5f9;
+            padding: 0.6rem 0;
+        }
+        .qa-item:last-child {
+            border-bottom: none;
+        }
+        .qa-question {
+            font-weight: 500;
+            color: #1e293b;
+            font-size: 1rem;
+            padding-right: 0.5rem;
+        }
+        .qa-question .q-label {
+            color: #2563eb;
+            font-weight: 700;
+            margin-right: 0.3rem;
+        }
+        .qa-answer {
+            color: #0f172a;
+            font-size: 0.97rem;
+            background: #f8fafc;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #22c55e;
+        }
+        .qa-answer .ans-label {
+            font-weight: 700;
+            color: #16a34a;
+            margin-right: 0.4rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .step {
+            display: block;
+            padding: 0.15rem 0 0.15rem 1.2rem;
+            position: relative;
+        }
+        .step::before {
+            content: "▸";
+            color: #3b82f6;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .final-box {
+            background: #fef9c3;
+            padding: 0.1rem 0.8rem;
+            border-radius: 6px;
+            display: inline-block;
+            border: 1px solid #fde047;
+            font-weight: 600;
+            color: #854d0e;
+            margin-top: 0.2rem;
+        }
+        .note-box {
+            background: #eff6ff;
+            border-radius: 14px;
+            padding: 1.2rem 1.8rem;
+            margin-top: 2rem;
+            border-left: 6px solid #f59e0b;
+            color: #78350f;
+        }
+        .note-box strong {
+            color: #b45309;
+        }
+        .note-box ul {
+            padding-left: 1.5rem;
+            margin-top: 0.4rem;
+            line-height: 1.7;
+        }
+        .inline-math {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1>📐 <span>Calculus</span> – Full Step‑by‑Step Solutions</h1>
+            <p>Every question from the problem set • Detailed derivations shown</p>
+        </div>
+
+        <!-- ===================== SECTION 1: LIMITS ===================== -->
+        <div class="section">
+            <div class="section-title">1. Limits <span class="badge">6 parts</span></div>
+
+            <div class="qa-grid">
+                <!-- 1.1 -->
+                <div class="qa-item qa-question">① \(\displaystyle \lim_{x \to 0} \frac{\sin x}{x}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Use the standard trigonometric limit: \(\displaystyle \lim_{x \to 0} \frac{\sin x}{x} = 1\).</span>
+                    <span class="step">No further manipulation is needed.</span>
+                    <span class="final-box">Answer: \(1\)</span>
+                </div>
+
+                <!-- 1.2 -->
+                <div class="qa-item qa-question">② \(\displaystyle \lim_{x \to 0} \frac{2x}{\tan x}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Rewrite as \(\displaystyle 2 \cdot \lim_{x \to 0} \frac{x}{\tan x}\).</span>
+                    <span class="step">Since \(\tan x = \frac{\sin x}{\cos x}\), we have \(\displaystyle \frac{x}{\tan x} = \frac{x \cos x}{\sin x} = \frac{\cos x}{\sin x / x}\).</span>
+                    <span class="step">Thus \(\displaystyle \lim_{x \to 0} \frac{x}{\tan x} = \frac{\cos 0}{1} = 1\).</span>
+                    <span class="step">So the limit is \(2 \cdot 1 = 2\).</span>
+                    <span class="final-box">Answer: \(2\)</span>
+                </div>
+
+                <!-- 1.3 -->
+                <div class="qa-item qa-question">③ \(\displaystyle \lim_{x \to 0} \frac{\sin 5x}{\sin 4x}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Multiply numerator and denominator by \(5x\) and \(4x\) respectively:
+                    \(\displaystyle \frac{\sin 5x}{\sin 4x} = \frac{5x}{4x} \cdot \frac{\sin 5x}{5x} \cdot \frac{4x}{\sin 4x}\).</span>
+                    <span class="step">As \(x \to 0\), \(\frac{\sin 5x}{5x} \to 1\) and \(\frac{\sin 4x}{4x} \to 1\).</span>
+                    <span class="step">Therefore the limit is \(\displaystyle \frac{5}{4} \cdot 1 \cdot 1 = \frac{5}{4}\).</span>
+                    <span class="final-box">Answer: \(\frac{5}{4}\)</span>
+                </div>
+
+                <!-- 1.4 -->
+                <div class="qa-item qa-question">④ \(\displaystyle \lim_{x \to 0} \sin(x - \sin x)\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">As \(x \to 0\), \(\sin x \to 0\), so the inner expression \(x - \sin x \to 0\).</span>
+                    <span class="step">Since \(\sin\) is continuous, \(\sin( \text{small} ) \to \sin 0 = 0\).</span>
+                    <span class="final-box">Answer: \(0\)</span>
+                </div>
+
+                <!-- 1.5 -->
+                <div class="qa-item qa-question">⑤ \(\displaystyle \lim_{x \to 0} \frac{3x - \sin x}{x}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Split the fraction: \(\displaystyle \frac{3x}{x} - \frac{\sin x}{x} = 3 - \frac{\sin x}{x}\).</span>
+                    <span class="step">Using the standard limit \(\frac{\sin x}{x} \to 1\), we get \(3 - 1 = 2\).</span>
+                    <span class="final-box">Answer: \(2\)</span>
+                </div>
+
+                <!-- 1.6 -->
+                <div class="qa-item qa-question">⑥ \(\displaystyle \lim_{x \to 0} \frac{x - \sin x}{x^3}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Use the Taylor series expansion: \(\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots\).</span>
+                    <span class="step">Then \(x - \sin x = x - \left(x - \frac{x^3}{6} + \cdots\right) = \frac{x^3}{6} - \frac{x^5}{120} + \cdots\).</span>
+                    <span class="step">Divide by \(x^3\): \(\displaystyle \frac{x - \sin x}{x^3} = \frac{1}{6} - \frac{x^2}{120} + \cdots\).</span>
+                    <span class="step">As \(x \to 0\), all higher terms vanish, leaving \(\frac{1}{6}\).</span>
+                    <span class="final-box">Answer: \(\frac{1}{6}\)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 2: CONTINUITY ===================== -->
+        <div class="section">
+            <div class="section-title">2. Continuity with parameter \(a\) <span class="badge">2 parts</span></div>
+
+            <div class="qa-grid">
+                <!-- 2.1 -->
+                <div class="qa-item qa-question">① For what \(a\) is \(f(x) = \sqrt{a^2 - 2a}\) continuous at every \(x\)?</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">The function is constant (does not depend on \(x\)). A constant is continuous for all \(x\) as long as it is real‑valued.</span>
+                    <span class="step">We need the radicand \(\ge 0\): \(a^2 - 2a \ge 0 \;\Rightarrow\; a(a-2) \ge 0\).</span>
+                    <span class="step">This inequality holds when \(a \le 0\) or \(a \ge 2\).</span>
+                    <span class="final-box">Answer: \((-\infty,\,0] \cup [2,\,\infty)\)</span>
+                </div>
+
+                <!-- 2.2 -->
+                <div class="qa-item qa-question">② For what \(a\) is \(g(x) = \dfrac{x}{a^2 - 2a}\) continuous?</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">This is a linear function in \(x\) divided by a constant denominator. It is continuous everywhere the denominator is non‑zero.</span>
+                    <span class="step">Set \(a^2 - 2a \ne 0 \;\Rightarrow\; a(a-2) \ne 0 \;\Rightarrow\; a \ne 0\) and \(a \ne 2\).</span>
+                    <span class="final-box">Answer: \(\mathbb{R} \setminus \{0, 2\}\)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 3: ASYMPTOTES ===================== -->
+        <div class="section">
+            <div class="section-title">3. Horizontal Asymptotes <span class="badge">2 parts</span></div>
+
+            <div class="qa-grid">
+                <!-- 3.1 -->
+                <div class="qa-item qa-question">① \(\displaystyle f(x) = \frac{5x + 8x - 3}{3x^2 + 2}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Simplify numerator: \(5x+8x = 13x\), so \(f(x) = \frac{13x - 3}{3x^2 + 2}\).</span>
+                    <span class="step">For horizontal asymptote, examine \(\lim_{x \to \infty} f(x)\) and \(\lim_{x \to -\infty} f(x)\).</span>
+                    <span class="step">Divide numerator and denominator by the highest power \(x^2\):
+                    \(\displaystyle \frac{13/x - 3/x^2}{3 + 2/x^2}\).</span>
+                    <span class="step">As \(x \to \infty\), \(13/x \to 0\), \(3/x^2 \to 0\), \(2/x^2 \to 0\), leaving \(0/3 = 0\).</span>
+                    <span class="final-box">Answer: \(y = 0\)</span>
+                </div>
+
+                <!-- 3.2 -->
+                <div class="qa-item qa-question">② \(\displaystyle f(x) = \frac{11x + 2}{2x^2 - 1}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Degree of numerator = 1, degree of denominator = 2. Since degree(num) < degree(den), the horizontal asymptote is always \(y=0\).</span>
+                    <span class="step">To verify: divide by \(x^2\): \(\displaystyle \frac{11/x + 2/x^2}{2 - 1/x^2} \to \frac{0}{2} = 0\).</span>
+                    <span class="final-box">Answer: \(y = 0\)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 4: DERIVATIVES ===================== -->
+        <div class="section">
+            <div class="section-title">4. Derivatives <span class="badge">9 parts</span></div>
+
+            <div class="qa-grid">
+                <!-- 4.1 -->
+                <div class="qa-item qa-question">① \(y = 4 - x^2\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Differentiate term‑by‑term: \(\frac{d}{dx}(4) = 0\), \(\frac{d}{dx}(-x^2) = -2x\).</span>
+                    <span class="final-box">Answer: \(y' = -2x\)</span>
+                </div>
+
+                <!-- 4.2 -->
+                <div class="qa-item qa-question">② \(y = (2x+3)(5x^2 - 4x)\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Use the product rule: \((uv)' = u'v + uv'\). Let \(u=2x+3,\; v=5x^2-4x\).</span>
+                    <span class="step">\(u' = 2\), \(v' = 10x - 4\).</span>
+                    <span class="step">Then \(y' = 2(5x^2-4x) + (2x+3)(10x-4)\).</span>
+                    <span class="step">Expand: \(10x^2 - 8x + (20x^2 - 8x + 30x - 12) = 30x^2 + 14x - 12\).</span>
+                    <span class="final-box">Answer: \(y' = 30x^2 + 14x - 12\)</span>
+                </div>
+
+                <!-- 4.3 -->
+                <div class="qa-item qa-question">③ \(y = x^2\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Power rule: \(\frac{d}{dx} x^n = n x^{n-1}\). Here \(n=2\).</span>
+                    <span class="final-box">Answer: \(y' = 2x\)</span>
+                </div>
+
+                <!-- 4.4 -->
+                <div class="qa-item qa-question">④ \(g(t) = \dfrac{1}{t^2}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Rewrite as \(g(t) = t^{-2}\).</span>
+                    <span class="step">Power rule: \(g'(t) = -2 t^{-3} = -\dfrac{2}{t^3}\).</span>
+                    <span class="final-box">Answer: \(g'(t) = -\dfrac{2}{t^3}\)</span>
+                </div>
+
+                <!-- 4.5 -->
+                <div class="qa-item qa-question">⑤ \(y = \dfrac{\sin x}{x}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Quotient rule: \(\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}\), with \(u = \sin x,\; v = x\).</span>
+                    <span class="step">\(u' = \cos x\), \(v' = 1\).</span>
+                    <span class="step">Thus \(y' = \frac{x \cos x - \sin x \cdot 1}{x^2}\).</span>
+                    <span class="final-box">Answer: \(y' = \dfrac{x\cos x - \sin x}{x^2}\)</span>
+                </div>
+
+                <!-- 4.6 -->
+                <div class="qa-item qa-question">⑥ \(x^2 + y^2 = 25\) (implicit)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Differentiate both sides with respect to \(x\). Remember \(y\) is a function of \(x\).</span>
+                    <span class="step">\(\frac{d}{dx}(x^2) = 2x\), \(\frac{d}{dx}(y^2) = 2y y'\), \(\frac{d}{dx}(25) = 0\).</span>
+                    <span class="step">So \(2x + 2y y' = 0 \;\Rightarrow\; 2y y' = -2x \;\Rightarrow\; y' = -\frac{x}{y}\).</span>
+                    <span class="final-box">Answer: \(y' = -\dfrac{x}{y}\)</span>
+                </div>
+
+                <!-- 4.7 -->
+                <div class="qa-item qa-question">⑦ \(f(x) = \dfrac{x}{2x+1}\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Quotient rule: \(u = x,\; v = 2x+1\). \(u' = 1,\; v' = 2\).</span>
+                    <span class="step">\(f'(x) = \frac{1\cdot(2x+1) - x\cdot 2}{(2x+1)^2} = \frac{2x+1-2x}{(2x+1)^2} = \frac{1}{(2x+1)^2}\).</span>
+                    <span class="final-box">Answer: \(f'(x) = \dfrac{1}{(2x+1)^2}\)</span>
+                </div>
+
+                <!-- 4.8 -->
+                <div class="qa-item qa-question">⑧ \(y = (5x^2 - x^4)^7\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Chain rule: \(\frac{d}{dx} [g(x)]^n = n [g(x)]^{n-1} \cdot g'(x)\).</span>
+                    <span class="step">Let \(g(x) = 5x^2 - x^4\), \(n=7\). Then \(g'(x) = 10x - 4x^3\).</span>
+                    <span class="step">\(y' = 7(5x^2 - x^4)^6 \cdot (10x - 4x^3)\).</span>
+                    <span class="final-box">Answer: \(y' = 7(5x^2 - x^4)^6 (10x - 4x^3)\)</span>
+                </div>
+
+                <!-- 4.9 -->
+                <div class="qa-item qa-question">⑨ \(y = x^2 + \sin x\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Sum rule: \(\frac{d}{dx}(x^2) = 2x\), \(\frac{d}{dx}(\sin x) = \cos x\).</span>
+                    <span class="final-box">Answer: \(y' = 2x + \cos x\)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 5: TANGENT & INTERVALS ===================== -->
+        <div class="section">
+            <div class="section-title">5. Tangent Slope &amp; Increasing/Decreasing <span class="badge">2 parts</span></div>
+
+            <div class="qa-grid">
+                <!-- 5.1 -->
+                <div class="qa-item qa-question">① Slope of tangent to \(y = x + \dfrac{2}{x}\) at \(x=-3\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Find the derivative: \(y' = 1 - \dfrac{2}{x^2}\) (since \(\frac{d}{dx}(2x^{-1}) = -2x^{-2}\)).</span>
+                    <span class="step">Evaluate at \(x = -3\): \(y'(-3) = 1 - \dfrac{2}{(-3)^2} = 1 - \dfrac{2}{9} = \dfrac{7}{9}\).</span>
+                    <span class="step">The slope of the tangent line is the derivative at that point.</span>
+                    <span class="final-box">Answer: Slope \(= \dfrac{7}{9}\)</span>
+                </div>
+
+                <!-- 5.2 -->
+                <div class="qa-item qa-question">② Critical points &amp; intervals of \(f(x) = x^3 - 12x - 5\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Find \(f'(x) = 3x^2 - 12\).</span>
+                    <span class="step">Set \(f'(x) = 0\): \(3x^2 - 12 = 0 \;\Rightarrow\; x^2 = 4 \;\Rightarrow\; x = \pm 2\).</span>
+                    <span class="step">These are the critical points.</span>
+                    <span class="step">Test intervals:
+                        <br/> For \(x < -2\) (e.g., \(x=-3\)): \(f'(-3) = 27-12 = 15 > 0\) → increasing.
+                        <br/> For \(-2 < x < 2\) (e.g., \(x=0\)): \(f'(0) = -12 < 0\) → decreasing.
+                        <br/> For \(x > 2\) (e.g., \(x=3\)): \(f'(3) = 27-12 = 15 > 0\) → increasing.
+                    </span>
+                    <span class="final-box">Critical points: \(x = -2,\; 2\). Increasing on \((-\infty, -2) \cup (2, \infty)\); Decreasing on \((-2, 2)\).</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 7: INTEGRALS ===================== -->
+        <div class="section">
+            <div class="section-title">7. Integrals <span class="badge">4 parts</span></div>
+
+            <div class="qa-grid">
+                <!-- 7.1 -->
+                <div class="qa-item qa-question">① \(\displaystyle \int \frac{4}{\sin x} \, dx\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Recall that \(\frac{1}{\sin x} = \csc x\). So the integral is \(4 \int \csc x \, dx\).</span>
+                    <span class="step">Standard formula: \(\int \csc x \, dx = \ln\left|\tan\frac{x}{2}\right| + C\).</span>
+                    <span class="step">Multiply by 4.</span>
+                    <span class="final-box">Answer: \(4 \ln\left|\tan\frac{x}{2}\right| + C\)</span>
+                </div>
+
+                <!-- 7.2 -->
+                <div class="qa-item qa-question">② \(\displaystyle \int \frac{5}{\sin^2 x} \, dx\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">\(\frac{1}{\sin^2 x} = \csc^2 x\). So the integral is \(5 \int \csc^2 x \, dx\).</span>
+                    <span class="step">Standard formula: \(\int \csc^2 x \, dx = -\cot x + C\).</span>
+                    <span class="step">Multiply by 5.</span>
+                    <span class="final-box">Answer: \(-5\cot x + C\)</span>
+                </div>
+
+                <!-- 7.3 -->
+                <div class="qa-item qa-question">③ \(\displaystyle \int (x^3 + 1)^5 (3x^2 + 1) \, dx\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step"><strong>Note:</strong> The derivative of \(x^3 + x\) is \(3x^2 + 1\). This suggests the base should be \(x^3 + x\) (likely a typo).</span>
+                    <span class="step">Assuming the integrand is \((x^3 + x)^5 (3x^2 + 1)\), let \(u = x^3 + x\), then \(du = (3x^2+1)dx\).</span>
+                    <span class="step">The integral becomes \(\int u^5 \, du = \frac{u^6}{6} + C\).</span>
+                    <span class="step">Substitute back: \(\frac{(x^3 + x)^6}{6} + C\).</span>
+                    <span class="step">If the literal expression \((x^3+1)^5(3x^2+1)\) is required, expand \((x^3+1)^5\) and multiply by \((3x^2+1)\), then integrate term‑by‑term (very lengthy).</span>
+                    <span class="final-box">Answer (with correction): \(\dfrac{(x^3 + x)^6}{6} + C\)</span>
+                </div>
+
+                <!-- 7.4 -->
+                <div class="qa-item qa-question">④ \(\displaystyle \int \frac{3}{\sqrt{x^2 + 1}} \, dx\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Factor out 3: \(3 \int \frac{1}{\sqrt{x^2 + 1}} \, dx\).</span>
+                    <span class="step">Standard formula: \(\int \frac{dx}{\sqrt{x^2 + 1}} = \sinh^{-1}(x) + C = \ln\left|x + \sqrt{x^2+1}\right| + C\).</span>
+                    <span class="step">Multiply by 3.</span>
+                    <span class="final-box">Answer: \(3\sinh^{-1}(x) + C = 3\ln\left|x + \sqrt{x^2+1}\right| + C\)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 9: MORE INTEGRALS ===================== -->
+        <div class="section">
+            <div class="section-title">9. More Integrals <span class="badge">3 parts</span></div>
+
+            <div class="qa-grid">
+                <!-- 9.1 -->
+                <div class="qa-item qa-question">① \(\displaystyle \int \sqrt{x + 1} \, dx\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Let \(u = x+1\), then \(du = dx\).</span>
+                    <span class="step">The integral becomes \(\int u^{1/2} \, du = \frac{u^{3/2}}{3/2} + C = \frac{2}{3} u^{3/2} + C\).</span>
+                    <span class="step">Substitute back \(u = x+1\).</span>
+                    <span class="final-box">Answer: \(\dfrac{2}{3}(x+1)^{3/2} + C\)</span>
+                </div>
+
+                <!-- 9.2 -->
+                <div class="qa-item qa-question">② \(\displaystyle \int \sec^2(x+1) \cdot \sec x \, dx\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">This integral has <strong>no elementary antiderivative</strong> in its given form because it is a product of secant functions with different arguments.</span>
+                    <span class="step"><strong>Correction:</strong> If the second factor was \(\tan(x+1)\), i.e., \(\int \sec^2(x+1) \tan(x+1) dx\), then let \(u = \tan(x+1)\), \(du = \sec^2(x+1) dx\), giving \(\int u \, du = \frac{u^2}{2} + C = \frac{1}{2}\tan^2(x+1) + C\).</span>
+                    <span class="step">Please verify the original problem statement.</span>
+                    <span class="final-box">Answer: No elementary antiderivative (likely a typo). Corrected version gives \(\frac{1}{2}\tan^2(x+1) + C\).</span>
+                </div>
+
+                <!-- 9.3 -->
+                <div class="qa-item qa-question">③ \(\displaystyle \int x^2 e^{x^3} \, dx\)</div>
+                <div class="qa-item qa-answer">
+                    <span class="ans-label">Solution:</span>
+                    <span class="step">Let \(u = x^3\), then \(du = 3x^2 dx \;\Rightarrow\; x^2 dx = \frac{du}{3}\).</span>
+                    <span class="step">The integral becomes \(\int e^u \cdot \frac{du}{3} = \frac{1}{3} e^u + C\).</span>
+                    <span class="step">Substitute back \(u = x^3\).</span>
+                    <span class="final-box">Answer: \(\dfrac{1}{3} e^{x^3} + C\)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== SECTION 10: DUPLICATE ===================== -->
+        <div class="section">
+            <div class="section-title">10. Integrals (duplicate of Q9) <span class="badge">3 parts</span></div>
+
+            <div class="qa-grid">
+                <div class="qa-item qa-question">① \(\displaystyle \int \sqrt{x + 1} \, dx\)</div>
+                <div class="qa-item qa-answer"><span class="ans-label">Solution:</span> Same as 9①: \(u = x+1\), \(\frac{2}{3}u^{3/2}+C\). <span class="final-box">\(\frac{2}{3}(x+1)^{3/2} + C\)</span></div>
+
+                <div class="qa-item qa-question">② \(\displaystyle \int \sec^2(x+1) \cdot \sec x \, dx\)</div>
+                <div class="qa-item qa-answer"><span class="ans-label">Solution:</span> Same as 9② – no elementary antiderivative. <span class="final-box">Check typo.</span></div>
+
+                <div class="qa-item qa-question">③ \(\displaystyle \int x^2 e^{x^3} \, dx\)</div>
+                <div class="qa-item qa-answer"><span class="ans-label">Solution:</span> Same as 9③: \(u = x^3\), \(du = 3x^2 dx\). <span class="final-box">\(\frac{1}{3}e^{x^3} + C\)</span></div>
+            </div>
+        </div>
+
+        <!-- ===================== NOTES ON TYPOS ===================== -->
+        <div class="note-box">
+            <p><strong>📝 Important notes on possible typos in the original set:</strong></p>
+            <ul>
+                <li><strong>Q7③:</strong> The integrand \((x^3+1)^5(3x^2+1)\) does not match a simple u‑sub. The derivative of \(x^3 + x\) is \(3x^2+1\), so the intended base was very likely \(x^3+x\). We solved that version.</li>
+                <li><strong>Q9② / Q10②:</strong> \(\sec^2(x+1)\cdot\sec x\) has no elementary antiderivative. If the second factor was \(\tan(x+1)\), the solution is \(\frac{1}{2}\tan^2(x+1)+C\).</li>
+                <li><strong>Q2:</strong> The original had integral signs for constant functions; we interpreted them as constant expressions and solved for continuity accordingly.</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
